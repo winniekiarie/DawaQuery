@@ -1,8 +1,8 @@
 import React from 'react';
 
-const DrugDataset = ({ drug: { imdbID, Year, Poster, Title, Type } }) => {
+const Drugdataset = ({ drug: { imdbID, Year, Poster, Title, Type } }) => {
   return (
-    <div className="drug" key={imdbID}>
+    <div className="movie" key={imdbID}>
       <div>
         <p>{Year}</p>
       </div>
@@ -19,4 +19,4 @@ const DrugDataset = ({ drug: { imdbID, Year, Poster, Title, Type } }) => {
   );
 }
 
-export default DrugDatset;
+export default Drugdataset;
