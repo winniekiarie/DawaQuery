@@ -1,7 +1,5 @@
-
 import React, { useState, useEffect } from "react";
-
-import Drugdateset from "./Drugdataset";
+import Drugdataset from "./Drugdataset"; // Corrected import statement
 import SearchIcon from "./search.svg";
 import "./App.css";
 
@@ -19,7 +17,7 @@ const App = () => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
 
-    setDrugs(data.Search);
+    setMovies(data.Search); // Corrected function name
   };
 
   return (
@@ -41,7 +39,7 @@ const App = () => {
 
       {movies?.length > 0 ? (
         <div className="container">
-          {drugs.map((drug) => (
+          {movies.map((drug) => ( // Changed 'drugs' to 'movies' here
             <Drugdataset drug={drug} />
           ))}
         </div>

@@ -1,13 +1,11 @@
 import React from 'react';
 
-const Drugdataset = ({ drug: { imdbID,year, name,chemical name, Type } }) => {
+const Drugdataset = ({ drug: { imdbID, year, name, chemicalName, Type } }) => {
   return (
     <div className="drug" key={imdbID}>
       <div>
-        <p>{Year}</p>
+        <p>{year}</p> {/* Changed 'Year' to 'year' */}
       </div>
-
-
 
       <div>
         <span>{Type}</span>
