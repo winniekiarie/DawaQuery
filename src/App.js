@@ -53,8 +53,8 @@ const App = () => {
 
       {drugs?.length > 0 ? (
         <div className="container">
-          {drugs.map((drug) => (
-            <Drugdataset key={drug.id} drug={drug} /> // Assuming each drug has a unique 'id'
+          {drugs.map((drug, index) => (
+            <Drugdataset key={index} drug={drug} /> // Assuming each drug has a unique 'id'
           ))}
         </div>
       ) : (
@@ -67,6 +67,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
